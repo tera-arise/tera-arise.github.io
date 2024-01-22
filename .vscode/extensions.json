@@ -1,14 +1,14 @@
 {
   "recommendations": [
+    "cake-build.cake-vscode",
     "chdsbd.github-code-owners",
     "codezombiech.gitignore",
     "davidanson.vscode-markdownlint",
-    "ecmel.vscode-html-css",
     "editorconfig.editorconfig",
     "firefox-devtools.vscode-firefox-debug",
+    "ginfuru.better-nunjucks",
     "github.vscode-github-actions",
     "github.vscode-pull-request-github",
-    "ms-vscode.live-server",
     "redhat.vscode-xml",
     "redhat.vscode-yaml",
     "yy0931.gitconfig-lsp"

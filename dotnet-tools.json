@@ -2,6 +2,12 @@
   "version": 1,
   "isRoot": true,
   "tools": {
+    "cake.tool": {
+      "version": "4.0.0",
+      "commands": [
+        "dotnet-cake"
+      ]
+    },
     "dotnet-config": {
       "version": "1.0.6",
       "commands": [
@@ -12,12 +18,6 @@
       "version": "1.4.1",
       "commands": [
         "dotnet-file"
-      ]
-    },
-    "dotnet-serve": {
-      "version": "1.10.172",
-      "commands": [
-        "dotnet-serve"
       ]
     }
   }

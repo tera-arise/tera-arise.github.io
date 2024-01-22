@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "2.0.1",
+    "markdownlint-cli2": "0.12.1"
+  },
+  "scripts": {
+    "build": "npx markdownlint-cli2 && npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve --port 54321"
+  }
+}

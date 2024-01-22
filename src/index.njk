@@ -1,0 +1,54 @@
+---
+eleventyImport:
+    collections:
+        - news
+layout: core
+pagination:
+    data: collections.news
+    size: 5
+permalink: "/{{ pagination.pageNumber + '/' if pagination.pageNumber != 0 }}"
+---
+
+{%- for post in pagination.items | reverse %}
+<div class="row m-3 justify-content-center">
+    <div class="card col-xxl-8">
+        <div class="d-flex">
+            <div class="flex-shrink-0">
+                <a href="{{ post.url | url }}">
+                    <img class="rounded"
+                         style="width: 10rem;"
+                         src="{{ post.data.image or '/images/logo.webp' | url }}" />
+                </a>
+            </div>
+            <div class="card-body flex-grow-1">
+                <h5 class="card-title">
+                    <a class="text-decoration-none"
+                       href="{{ post.url | url }}"
+                       title="{{ post.data.title }}">
+                        {{ post.data.title }}
+                    </a>
+                </h5>
+                <p class="card-subtitle text-muted">{{ post.date.toUTCString().slice(0, 16) }}</p>
+                <p class="card-text">{{ post.data.summary }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{%- endfor %}
+
+<div class="row">
+    <ul class="pagination justify-content-center">
+        <li class="page-item me-2">
+            <a class="page-link{{ ' disabled' if not pagination.href.previous }}"
+                href="{{ pagination.href.previous | url }}">
+                &laquo;
+            </a>
+        </li>
+        <li class="page-item ms-2">
+            <a class="page-link{{ ' disabled' if not pagination.href.next }}"
+                href="{{ pagination.href.next | url }}">
+                &raquo;
+            </a>
+        </li>
+    </ul>
+</div>

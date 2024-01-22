@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+name: Deploy
+on:
+    push:
+        branches:
+            - master
+    workflow_call:
+    workflow_dispatch:
+defaults:
+    run:
+        shell: bash
+env:
+    DOTNET_CLI_TELEMETRY_OPTOUT: true
+    DOTNET_GENERATE_ASPNET_CERTIFICATE: false
+    DOTNET_NOLOGO: true
+concurrency:
+    group: "deploy"
+jobs:
+    deploy:
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        runs-on: windows-2022
+        steps:
+            - name: Clone repository
+              uses: actions/checkout@v4.1.1
+              with:
+                  fetch-depth: 0
+                  submodules: recursive
+            - name: Set up .NET
+              uses: actions/setup-dotnet@v4.0.0
+            - name: Set up Node.js
+              uses: actions/setup-node@v4.0.1
+            - name: Run Cake
+              run: |
+                  ./cake
+            - name: Configure GitHub Pages
+              uses: actions/configure-pages@v4.0.0
+            - name: Upload GitHub Pages artifact
+              uses: actions/upload-pages-artifact@v3.0.0
+              with:
+                  path: out/bin
+            - name: Deploy GitHub Pages artifact
+              id: deployment
+              uses: actions/deploy-pages@v4
+            - name: Upload artifacts
+              if: always()
+              uses: actions/upload-artifact@v4.2.0
+              with:
+                  name: ${{ github.workflow }}-${{ github.run_number }}-${{ github.run_attempt }}
+                  path: |
+                      out/bin
+                      out/log

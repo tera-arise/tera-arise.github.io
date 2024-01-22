@@ -1,0 +1,26 @@
+---
+layout: core
+---
+
+<div class="row m-3 justify-content-center">
+    <div class="card col-xxl-8">
+        <div class="card-body">
+            <h1 class="card-title">{{ title }}</h1>
+            <p class="card-subtitle text-muted">{{ page.date.toUTCString().slice(0, 16) }}</p>
+            <p class="card-text">{{ summary }}</p>
+        </div>
+        <hr />
+        {%- if image %}
+        <div class="card-body">
+            <!-- TODO: The image interferes with the page layout for some reason. -->
+            <img class="card-img-top rounded"
+                 src="{{ image | url }}" />
+        </div>
+        {%- endif %}
+        <div class="card-body">
+            <div class="card-text">
+            {{ content | safe }}
+            </div>
+        </div>
+    </div>
+</div>

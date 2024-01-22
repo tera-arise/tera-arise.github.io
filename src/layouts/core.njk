@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-us"
+      data-bs-theme="dark">
+    <head prefix="og: https://ogp.me/ns#">
+        <title>{{ title + ' | ' if title }}TERA Arise</title>
+
+        <meta name="description"
+              content="A game resurrection project for the final build of TERA EU." />
+        <meta name="author"
+              content="TERA Arise Contributors" />
+
+        <meta name="og:type"
+              content="{{ 'article' if layout == 'news' else 'website' }}" />
+        <meta name="og:title"
+              content="{{ title + ' | ' if title }}TERA Arise" />
+        <meta name="og:description"
+              content="{{ summary if summary else 'A game resurrection project for the final build of TERA EU.' }}" />
+        <meta name="og:url"
+              content="https://tera-arise.io{{ page.url | url }}" />
+        <meta name="og:image"
+              content="https://tera-arise.io{{ preview if preview else '/images/preview.webp' | url }}" />
+        {%- if layout == 'news' %}
+        <meta name="og:published_time"
+              content="{{ page.date.toISOString() }}" />
+        <meta name="og:section"
+              content="{{ type }}" />
+        {%- endif %}
+
+        <meta name="viewport"
+              content="initial-scale=1, width=device-width" />
+
+        <meta name="darkreader-lock" />
+
+        <link rel="icon"
+              href="{{ '/images/arise.ico' | url }}" />
+
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+              crossorigin="anonymous"
+              referrerpolicy="no-referrer"
+              integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" />
+
+        <style>
+            body
+            {
+                background-image: url("{{ '/images/background.webp' | url }}");
+                background-attachment: fixed;
+                background-position: bottom;
+                background-size: cover;
+            }
+
+            .bg-button
+            {
+                background-color: #313539;
+            }
+
+            .bg-accent
+            {
+                background-color: #cc3391;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container pb-5">
+            <header>
+                <div class="row m-3 text-center">
+                    <!-- TODO: The logo link area is much bigger than it should be. -->
+                    <a href="{{ '/' | url }}"
+                       title="TERA Arise">
+                        <img style="width: 30rem;"
+                             src="{{ '/images/logo.webp' | url }}"
+                             alt="TERA Arise" />
+                    </a>
+                </div>
+
+                <div class="row m-3 justify-content-center">
+                    <div class="card col-xxl-auto navbar navbar-expand-lg">
+                        <ul class="navbar-nav nav-fill">
+                            <!-- TODO: Anchor tags are not clickable in the entire nav item. -->
+
+                            <li class="nav-item ms-2 me-1 px-2 bg-button rounded">
+                                <a class="nav-link"
+                                   href="{{ '/' | url }}"
+                                   title="News">
+                                    News
+                                </a>
+                            </li>
+                            <li class="nav-item me-1 px-2 bg-button rounded">
+                                <a class="nav-link"
+                                   href="{{ '/game' | url }}"
+                                   title="Game">
+                                    Game
+                                </a>
+                            </li>
+                            <li class="nav-item me-1 px-2 bg-accent bg-gradient rounded">
+                                <a class="nav-link"
+                                   href="{{ '/play' | url }}"
+                                   title="Play">
+                                    Play
+                                </a>
+                            </li>
+                            <li class="nav-item me-2 px-2 bg-button rounded">
+                                <a class="nav-link"
+                                   href="{{ '/support' | url }}"
+                                   title="Support">
+                                    Support
+                                </a>
+                            </li>
+
+                            <li class="nav-item ms-2 me-1 me-1 px-2 bg-button rounded">
+                                <a class="nav-link"
+                                   href="https://discord.gg/BZnmVMGYa9"
+                                   title="Discord">
+                                    Discord
+                                </a>
+                            </li>
+                            <li class="nav-item me-2 me-1 px-2 bg-button rounded">
+                                <a class="nav-link"
+                                   href="https://twitter.com/TeraArise"
+                                   title="Twitter">
+                                    Twitter
+                                </a>
+                            </li>
+
+                            <li class="nav-item ms-2 me-1 me-1 px-2 bg-button rounded">
+                                <a class="nav-link"
+                                   href="{{ '/funding' | url }}"
+                                   title="Funding">
+                                    Funding
+                                </a>
+                            </li>
+                            <li class="nav-item me-2 px-2 bg-button rounded">
+                                <a class="nav-link"
+                                   href="{{ '/development' | url }}"
+                                   title="Development">
+                                    Development
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                {{ content | safe }}
+            </main>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
+                crossorigin="anonymous"
+                referrerpolicy="no-referrer"
+                integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A==">
+        </script>
+    </body>
+</html>

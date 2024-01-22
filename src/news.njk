@@ -1,0 +1,21 @@
+---
+eleventyImport:
+    collections:
+        - news
+permalink: /news.json
+---
+
+[
+    {%- for post in collections.news | reverse %}
+    {
+        "Path": {{ post.page.url | url | dump | safe }},
+        {%- if post.data.image %}
+        "ImagePath": {{ post.data.image | url | dump | safe }},
+        {%- endif %}
+        "Date": {{ post.date.toISOString().slice(0, 10) | dump | safe }},
+        "Type": {{ post.data.type | dump | safe }},
+        "Title": {{ post.data.title | dump | safe }},
+        "Summary": {{ post.data.summary | dump | safe }}
+    }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+]

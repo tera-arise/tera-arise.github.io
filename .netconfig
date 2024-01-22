@@ -23,14 +23,23 @@
 	sha = a52fdae06d1a2fb13ec9d091eb9767373add18cb
 	etag = 61cb86e861d093c45ecc86d7e1a99ad9b315df0eb99cb216a844439d3678b8c8
 	weak
+[file "cake"]
+	url = https://github.com/tera-arise/.github/blob/master/syn/cake
+	sha = a52fdae06d1a2fb13ec9d091eb9767373add18cb
+	etag = e01672adb9650fad761fd21f0e2349afaf9294d5f00825a429ae3060a2f3576f
+	weak
+[file "cake.config"]
+	url = https://github.com/tera-arise/.github/blob/master/syn/cake.config
+	sha = a52fdae06d1a2fb13ec9d091eb9767373add18cb
+	etag = 71fbce2c699768f363332125e11b7e6335672c19932a369f7e146faf579371e9
+	weak
 [file "nuget.config"]
 	url = https://github.com/tera-arise/.github/blob/master/syn/nuget.config
 	sha = a52fdae06d1a2fb13ec9d091eb9767373add18cb
 	etag = 1a37c641ea5aeda5671440422578c1a054e7177257856b137191cf6e181e29e1
 	weak
-[serve]
-    port = 54321
-    tls
-    brotli
-    gzip
-    cors
+[file "tasks.vs.json"]
+	url = https://github.com/tera-arise/.github/blob/master/syn/tasks.vs.json
+	sha = 96bc579c85d292bf87d8d97188792d3adfc80e77
+	etag = e37280c2dccfe881742b68239db201d39758cff1f1c7472f358b7a1164a5771d
+	weak
