@@ -6,7 +6,17 @@ layout: core
     <div class="card col-xxl-8">
         <div class="card-body">
             <h1 class="card-title">{{ title }}</h1>
-            <p class="card-subtitle text-muted">{{ page.date.toUTCString().slice(0, 16) }}</p>
+            <p class="card-subtitle">
+                <span class="text-muted">{{ page.date.toUTCString().slice(0, 16) }}</span>
+                •
+                <span class="text-muted">{{ category }}</span>
+                {%- if author %}
+                •
+                <a class="text-decoration-none"
+                   href="{{ authors[author] }}"
+                   title="{{ author }}">{{ author }}</a>
+                {%- endif %}
+            </p>
             <p class="card-text">{{ summary }}</p>
         </div>
         <hr />

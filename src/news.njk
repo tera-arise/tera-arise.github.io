@@ -14,7 +14,13 @@ permalink: /news.json
         "ImagePath": {{ post.data.image | url | dump | safe }},
         {%- endif %}
         "Date": {{ post.date.toISOString().slice(0, 10) | dump | safe }},
-        "Type": {{ post.data.type | dump | safe }},
+        "Category": {{ post.data.category | dump | safe }},
+        {%- if post.data.author %}
+        "Author": {
+            "Name": {{ post.data.author | dump | safe }},
+            "Uri": {{ authors[post.data.author] | dump | safe }}
+        },
+        {%- endif %}
         "Title": {{ post.data.title | dump | safe }},
         "Summary": {{ post.data.summary | dump | safe }}
     }{% if not loop.last %},{% endif %}

@@ -1,4 +1,6 @@
 ---
+category: Development
+author: alexrp
 title: Introducing TERA Arise
 summary: A game resurrection project for the final build of TERA EU.
 ---

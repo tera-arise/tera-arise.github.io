@@ -14,7 +14,8 @@ permalink: "/{{ pagination.pageNumber + '/' if pagination.pageNumber != 0 }}"
     <div class="card col-xxl-8">
         <div class="d-flex">
             <div class="flex-shrink-0">
-                <a href="{{ post.url | url }}">
+                <a href="{{ post.url | url }}"
+                   title="{{ post.data.title }}">
                     <img class="rounded"
                          style="width: 10rem;"
                          src="{{ post.data.image or '/images/logo.webp' | url }}" />
@@ -28,7 +29,17 @@ permalink: "/{{ pagination.pageNumber + '/' if pagination.pageNumber != 0 }}"
                         {{ post.data.title }}
                     </a>
                 </h5>
-                <p class="card-subtitle text-muted">{{ post.date.toUTCString().slice(0, 16) }}</p>
+                <p class="card-subtitle">
+                    <span class="text-muted">{{ post.date.toUTCString().slice(0, 16) }}</span>
+                    •
+                    <span class="text-muted">{{ post.data.category }}</span>
+                    {%- if post.data.author %}
+                    •
+                    <a class="text-decoration-none"
+                       href="{{ authors[post.data.author] }}"
+                       title="{{ post.data.author }}">{{ post.data.author }}</a>
+                    {%- endif %}
+                </p>
                 <p class="card-text">{{ post.data.summary }}</p>
             </div>
         </div>

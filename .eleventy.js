@@ -15,6 +15,7 @@ module.exports = function(config) {
             ],
             input: "src",
             layouts: "layouts",
+            data: "data",
             output: "out/bin",
         }
     }
