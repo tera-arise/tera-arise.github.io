@@ -12,9 +12,9 @@
         <meta name="og:type"
               content="{{ 'article' if layout == 'news' else 'website' }}" />
         <meta name="og:title"
-              content="{{ title + ' | ' if title }}TERA Arise" />
+              content="{{ title + ' | ' if layout == 'news' }}TERA Arise" />
         <meta name="og:description"
-              content="{{ summary if summary else 'A game resurrection project for the final build of TERA EU.' }}" />
+              content="{{ summary if layout == 'news' else 'A game resurrection project for the final build of TERA EU.' }}" />
         <meta name="og:url"
               content="https://tera-arise.io{{ page.url | url }}" />
         <meta name="og:image"
