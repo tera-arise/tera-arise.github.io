@@ -22,14 +22,14 @@ layout: core
         <hr />
         {%- if image %}
         <div class="card-body">
-            <!-- TODO: The image interferes with the page layout for some reason. -->
             <img class="card-img-top rounded"
                  src="{{ image | url }}" />
         </div>
         {%- endif %}
         <div class="card-body">
+            <!-- TODO: The content interferes with the page layout for some reason. -->
             <div class="card-text">
-            {{ content | safe }}
+                {{ content | safe }}
             </div>
         </div>
     </div>
