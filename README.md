@@ -1,8 +1,8 @@
 # TERA Arise Website
 
 <div align="center">
-    <img src="arise.png"
-         width="128"
+    <img src="src/images/logo.webp"
+         height="256"
          alt="TERA Arise" />
 </div>
 
