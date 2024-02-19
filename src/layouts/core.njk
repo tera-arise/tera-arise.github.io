@@ -18,7 +18,7 @@
         <meta name="og:url"
               content="https://tera-arise.io{{ page.url | url }}" />
         <meta name="og:image"
-              content="https://tera-arise.io{{ preview or '/images/preview.webp' | url }}" />
+              content="https://tera-arise.io{{ image or '/images/preview.webp' | url }}" />
         {%- if layout == 'news' %}
         <meta name="og:published_time"
               content="{{ page.date.toISOString() }}" />
