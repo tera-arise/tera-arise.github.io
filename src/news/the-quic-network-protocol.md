@@ -1,4 +1,5 @@
 ---
+image: /images/quic.webp
 category: Development
 author: alexrp
 title: The QUIC Network Protocol
