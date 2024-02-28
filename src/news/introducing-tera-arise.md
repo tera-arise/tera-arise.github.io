@@ -26,7 +26,7 @@ The project is currently in heavy development; we expect a playable experience
 to be a few years out still. If you would like to get involved in the design and
 development process, feel free to drop by our
 [GitHub organization](https://github.com/tera-arise) and
-[Discord server](https://discord.gg/BZnmVMGYa9).
+[Discord server](https://discord.gg/tera-arise).
 
 If you would like to support our efforts financially, please visit us on
 [Open Collective](https://opencollective.com/tera-arise) or

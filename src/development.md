@@ -19,6 +19,6 @@ Please note:
   [private vulnerability reporting](https://github.com/tera-arise/arise/security/advisories/new)
   on GitHub.
 * Non-technical suggestions for the game design should be posted on the relevant
-  forum channels on our [Discord server](https://discord.gg/BZnmVMGYa9). If we
+  forum channels on our [Discord server](https://discord.gg/tera-arise). If we
   decide to adopt a suggestion, a member of the developer team will create a
   GitHub issue for it.
