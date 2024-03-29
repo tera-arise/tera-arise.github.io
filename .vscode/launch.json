@@ -2,16 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Chome: Launch (Static)",
-      "presentation": {
-        "group": "tera-arise.github.io"
-      },
-      "type": "chrome",
-      "request": "launch",
-      "file": "${workspaceFolder}/index.html"
-    },
-    {
-      "name": "Chome: Launch (Served)",
+      "name": "Chome: Launch",
       "presentation": {
         "group": "tera-arise.github.io"
       },
@@ -20,16 +11,7 @@
       "url": "https://localhost:54321"
     },
     {
-      "name": "Edge: Launch (Static)",
-      "presentation": {
-        "group": "tera-arise.github.io"
-      },
-      "type": "msedge",
-      "request": "launch",
-      "file": "${workspaceFolder}/index.html"
-    },
-    {
-      "name": "Edge: Launch (Served)",
+      "name": "Edge: Launch",
       "presentation": {
         "group": "tera-arise.github.io"
       },
@@ -38,16 +20,7 @@
       "url": "https://localhost:54321"
     },
     {
-      "name": "Firefox: Launch (Static)",
-      "presentation": {
-        "group": "tera-arise.github.io"
-      },
-      "type": "firefox",
-      "request": "launch",
-      "file": "${workspaceFolder}/index.html"
-    },
-    {
-      "name": "Firefox: Launch (Served)",
+      "name": "Firefox: Launch",
       "presentation": {
         "group": "tera-arise.github.io"
       },
