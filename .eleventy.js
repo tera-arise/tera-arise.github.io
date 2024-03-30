@@ -5,7 +5,7 @@ module.exports = function(config) {
 
     config.addPassthroughCopy({
         "arise.*": "images",
-        "src/images": ""
+        "src/images": "",
     });
 
     return {
