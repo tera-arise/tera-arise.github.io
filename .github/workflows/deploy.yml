@@ -46,7 +46,7 @@ jobs:
                   path: out/bin
             - name: Deploy GitHub Pages artifact
               id: deployment
-              uses: actions/deploy-pages@v4.0.3
+              uses: actions/deploy-pages@v4.0.5
             - name: Upload artifacts
               if: always()
               uses: actions/upload-artifact@v4.3.1
