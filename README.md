@@ -16,6 +16,8 @@
 
 [![License](https://img.shields.io/github/license/tera-arise/tera-arise.github.io?color=brown)](LICENSE-AGPL-3.0)
 [![Commits](https://img.shields.io/github/commit-activity/m/tera-arise/tera-arise.github.io/master?label=commits&color=slateblue)](https://github.com/tera-arise/tera-arise.github.io/commits/master)
+[![Build](https://img.shields.io/github/actions/workflow/status/tera-arise/tera-arise.github.io/build.yml?branch=master)](https://github.com/tera-arise/tera-arise.github.io/actions/workflows/build.yml)
+[![Discord](https://img.shields.io/discord/1049553965987143750?color=peru&label=discord)](https://discord.gg/tera-arise)
 
 </div>
 
