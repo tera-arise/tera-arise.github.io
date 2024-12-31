@@ -8,7 +8,7 @@
     "@11ty/eleventy": "2.0.1",
     "@11ty/eleventy-plugin-directory-output": "1.0.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "5.0.0",
-    "markdownlint-cli2": "0.17.0"
+    "markdownlint-cli2": "0.17.1"
   },
   "scripts": {
     "build": "npx markdownlint-cli2 && npx @11ty/eleventy",
