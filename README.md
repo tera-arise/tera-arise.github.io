@@ -24,8 +24,8 @@
 --------------------------------------------------------------------------------
 
 This repository contains the source code for the TERA Arise organization
-website, which is hosted at [tera-arise.io](https://tera-arise.io) via
-[GitHub Pages](https://pages.github.com).
+website, which is hosted at [tera-arise.github.io](https://tera-arise.github.io)
+via [GitHub Pages](https://pages.github.com).
 
 ## Building
 

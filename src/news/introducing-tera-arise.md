@@ -15,7 +15,7 @@ the original game. Rather, we are using the game client and assets as a base to
 build upon, with the goal of eventually producing a better experience than the
 original game. We will essentially start from scratch, with an empty data center
 file, and work our way from there. Our overarching design goals are laid out on
-our [GitBook space](https://design.tera-arise.io).
+our [GitBook space](https://tera-arise.gitbook.io/tera-arise).
 
 Once the project progresses far enough, our goal is to run official TERA Arise
 servers accessible to the public. That said, anyone is welcome to run their own
